@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            .my_label{
+                margin-top:15px;
+                display:block;
+                color: red;
+                font-size: 25px;
+            }
+        </style>
+        <meta charset="UTF-8">
+        <title>Library Info Management</title>
+    </head>
+    <table border="5">
+        <thread>
+            <tr>
+                <th>Field Name</th>
+                <th>Field Value</th>
+            </tr>
+        </thread>
+        <tbody>
+            <tr>
+                <td>First row - cell 1</td>
+                <td>First row - cell 2</td>
+            </tr>
+            <tr>
+                <td>Second row - cell 1</td>
+                <td>Second row - cell 2</td>
+            </tr>
+            <tr>
+                <td colspan="2">Third row - cell 1</td>
+            </tr>
+        </tbody>
+    </table>
+    <body>
+        <h1>Welcome!</h1>
+        <form method="POST" action="/save">
+            {% csrf_token %}
+            <table>
+                <tbody>
+                    <tr>
+                        <td><label class="my_label">Student name</label></td>
+                        <td><input type="text" name="student_name" style="margin-top:10px;"></td>
+                    </tr>
+                    <tr>
+                        <td><label class="my_label">Student age</label></td>
+                        <td><input type="text" name="student_name" style="margin-top:10px;"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="submit" style="display:block; margin-top:10px;margin-bottom:10px;font-size: 15px; width:100%; background:green; color:white">Save</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <label class="my_label">Student name</label>
+            <br \>
+            <input type="text" name="student_name">
+            <label class="my_label">Student age</label>
+            <br \>
+            <input type="text" name="student_name">
+            <button type="submit" style="display:block; margin-top:10px;margin-bottom:10px;font-size: 15px">Save</button>
+        </form>
+        <a href="/shop">Go to shop</a>
+    </body>
+</html>
